@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from .models import Gonderi
 
-# Create your views here.
+
+def gonderilistele(request):
+    gonderiler = Gonderi.objects.all()
+    return render(request,'EdzBlog/gonderiliste.html',{"gonderiler":gonderiler})
