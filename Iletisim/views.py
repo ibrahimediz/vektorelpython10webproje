@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from .forms import IletisimForm
 
-# Create your views here.
+def yenimesaj(request):
+    form = IletisimForm()
+    return render(request,'Iletisim/yeni_mesaj.html',{'form':form})
