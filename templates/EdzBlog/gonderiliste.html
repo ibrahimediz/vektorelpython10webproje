@@ -1,14 +1,19 @@
-<html>
-<head>
-<title>
+{% extends 'Edzblog/base.html' %}
+{%block content%}
 
-İlk Sayfa
-</title>
-</head>
-<body>
-{% for gonderi in gonderiler %}
-<h1>{{gonderi.baslik}}</h1>
-<p>{{gonderi.yazi}}</p>
-{% endfor %}
-</body>
-</html>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% for gonderi in gonderiler %}
+                        <div class="post">
+                            <div class="date">
+                                <p>Yayın tarihi: {{ gonderi.yayim_zaman }}</p>
+                            </div>
+                            <h1><a href="">{{ gonderi.baslik }}</a></h1>
+                            <p>{{ gonderi.yazi |linebreaksbr }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+{%endblock%}
