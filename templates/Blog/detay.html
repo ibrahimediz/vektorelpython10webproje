@@ -1,0 +1,30 @@
+{% extends "../base.html" %}
+{% load static  %}
+ {% block header %}
+			<section id="banner" data-video="{% static 'images/banner' %}" >
+					<div class="inner">
+						<header>
+					
+	<h1>Blog Listesi</h1>
+	<a href="#main" class="button big alt scrolly">Gönderiler</a>
+					
+						</header>
+						
+					</div>
+
+
+ {% endblock  %}
+
+ {% block content %}
+            <div class="post">
+                    <div class="date">
+                        <p>published: {{ post.yayim_zaman }}</p>
+                        <h1>
+                                <img src="{{ post.cover.url}}"/> 
+                            <a href="{% url 'gDuzenle' pk=post.pk %}"> {{ post.baslik }}</a>
+                        </h1>
+                        <p>{{ post.yazi|linebreaksbr }}</p>
+                    </div>
+                </div>
+
+	 {% endblock   %}

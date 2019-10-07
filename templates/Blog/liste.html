@@ -1,0 +1,46 @@
+{% extends "../base.html" %}
+{% load static  %}
+ {% block header %}
+
+
+			<section id="banner" data-video="{% static 'images/banner' %}" >
+					<div class="inner">
+						<header>
+							
+	<h1>Blog Listesi</h1>
+	<a href="#main" class="button big alt scrolly">Gönderiler</a>
+					
+						</header>
+						
+					</div>
+
+
+ {% endblock  %}
+
+ {% block content %}
+
+				
+					<a href="{% url 'gYeni' %}" class="button big alt scrolly">Yeni Gönderi</a>
+
+		
+
+			<!-- Two -->
+				<section class="wrapper style2">
+				{% for gonderi in gonderiler %}
+					<div class="inner">
+						<header>
+						 
+							<a href="{% url 'gDetay' pk=gonderi.pk %}"><h2>{{  gonderi.baslik }}</h2></a>
+							<p>{{ gonderi.yazi|linebreaksbr }}</p>
+						</header>
+						<!-- Tabbed Video Section -->
+					</div>
+ 				{% endfor %}
+				</section>
+
+			<!-- Three -->
+				<section class="wrapper ">
+						
+				</section>
+
+	 {% endblock   %}

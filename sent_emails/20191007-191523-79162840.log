@@ -1,0 +1,26 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?q?127=2E0=2E0=2E1=3A8000_sitesinde_parola_s=C4=B1f=C4=B1rlama?=
+From: webmaster@localhost
+To: aa@aa.com
+Date: Mon, 07 Oct 2019 17:15:23 -0000
+Message-ID: <157046852353.7248.8161238659037663125@lab6-ogr>
+
+
+Bu e-postayı alıyorsunuz çünkü 127.0.0.1:8000 sitesindeki kullanıcı hesabınız için bir parola sıfırlama istediniz.
+
+Lütfen şurada belirtilen sayfaya gidin ve yeni bir parola seçin:
+
+http://127.0.0.1:8000/accounts/reset/NA/5ad-98f4fcce39d107ccf53f/
+
+Unutma ihtimalinize karşı, kullanıcı adınız: ali
+
+Sitemizi kullandığınız için teşekkürler!
+
+127.0.0.1:8000 ekibi
+
+
+
+-------------------------------------------------------------------------------
