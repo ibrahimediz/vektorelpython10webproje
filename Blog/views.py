@@ -16,13 +16,12 @@ def gonderiDetay(request,pk=0):
 
 def yeniGonderi(request):
     if request.method == "POST":
-        form = GonderiForm(request.POST)
+        form = GonderiForm(request.POST,request.FILES)
         if form.is_valid():
             gonderi = form.save(commit=False)
             # ben = User.objects.get(username="admi")
             gonderi.yazar = request.user
             gonderi.yayim_zaman = timezone.now()
-            gonderi.cover = request.cover
             gonderi.save()
             return redirect('gDetay', pk=gonderi.pk)
     else:

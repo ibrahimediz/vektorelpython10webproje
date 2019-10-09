@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'p38dvt*nb=ukk%4z3^2l7%ubmikbl^si3f-#8tm+3b7fxdv8*%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["127.0.0.1","vektorelpython10.pythonanywhere.com"]
 
 
 # Application definition
@@ -37,9 +37,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Blog',
+    'rest_framework',
+    'apis.apps.ApisConfig',
+    'Blog.apps.BlogConfig',
+    'todo.apps.TodoConfig',
     'account.apps.AccountConfig'
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES':[
+        'rest_framework.permissions.AllowAny',
+    ]
+
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

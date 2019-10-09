@@ -14,7 +14,7 @@ class Gonderi(models.Model):
     def yayimla(self):
         self.yayim_zaman = timezone.now
         self.save()
-    
+  
 
     def __str__(self):
         return self.baslik
